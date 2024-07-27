@@ -20,7 +20,8 @@
   grid-gap: 64px;
 }
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
+  display: block;
 }
 
 .grid-2-col {
@@ -39,22 +40,36 @@
 .card {
   background-color: white;
   border: none;
+  display: flex;
 }
 .card-header {
   padding: 0;
   border: none;
   background-color: white;
 }
+
+.card-header.grid {
+  column-gap: 0;
+}
+
+.embed {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
 .card-body {
   padding: 30px;
+}
+
+.card-body-text {
+  min-height: 400px;
 }
 .card-button {
   display: block;
   color: white;
   font-weight: 700;
   font-size: 14px;
-  line-height: 21px;
   text-align: center;
+  line-height: 21px;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-decoration: none;
@@ -200,8 +215,20 @@ footer p {
     padding: 8px 16px;
   }
 
+  main h2 {
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .img-responsive {
+    display: none;
+  }
+  .embed {
+    aspect-ratio: 16/9;
   }
 
   section {
